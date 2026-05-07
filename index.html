@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta de Salud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Encuesta de Salud</h2>
+
+    <form id="formSalud">
+
+      <!-- Edad con min y max -->
+      <label>Edad:</label>
+      <input type="number" min="1" max="120" required>
+
+      <!-- Peso con min y max -->
+      <label>Peso (kg):</label>
+      <input type="number" min="20" max="300" required>
+
+      <!-- Nivel de dolor -->
+      <label>Nivel de dolor:</label>
+      <input type="range" min="0" max="10" value="5" id="dolor">
+      <span id="valorDolor">5</span>
+
+      <!-- Tipo de sangre -->
+      <label>Tipo de sangre:</label>
+      <select required>
+        <option value="">Selecciona</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>O+</option>
+        <option>O-</option>
+      </select>
+
+      <!-- Código Postal con pattern -->
+      <label>Código Postal:</label>
+      <input type="text" pattern="[0-9]{5}" maxlength="5" required placeholder="Ej: 12345">
+
+      <button type="submit">Enviar</button>
+
+    </form>
+
+    <p id="mensaje"></p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
